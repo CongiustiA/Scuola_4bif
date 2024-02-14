@@ -161,6 +161,7 @@ public class ElencoSegreteria implements java.io.Serializable{
 				Studente st = inputS();
 
 				 aggiungiStudente(st);
+				Salvataggio.SalvaSuFile(this,path);
 
 			}
 				break;
@@ -169,7 +170,7 @@ public class ElencoSegreteria implements java.io.Serializable{
 				 path = "studenti.bin";
 
 				try {
-					Salvataggio.SalvaSuFile(this,path);;              
+					Salvataggio.SalvaSuFile(this,path);              
 				} catch (Exception e) {
 
 				}
@@ -179,6 +180,8 @@ public class ElencoSegreteria implements java.io.Serializable{
 			case 3: {
 				s.close();
 				stop = true;
+				Salvataggio.SalvaSuFile(this,path);
+
 			}
 
 			}
